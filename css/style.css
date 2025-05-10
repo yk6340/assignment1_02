@@ -73,7 +73,7 @@ body {
 }
 
 .icon-set {
-    width: clamp(100px, 9.6vw, 144px);
+    width: clamp(100px, 9.6vw, 250px);
     /* 画面サイズに応じて変動 */
     height: clamp(150px, 14vw, 206px);
     text-align: center;
@@ -335,6 +335,10 @@ body {
     /* ← 画像を中央に固定 */
 }
 
+#section6 {
+    margin-top: 50px;
+}
+
 .company-info {
     margin-top: 50px;
     max-width: 1200px;
@@ -379,4 +383,176 @@ body {
     width: 900px;
     height: 5px;
     background-color: #63B13C;
+}
+
+#section7 {
+    margin-top: 50px;
+}
+
+
+/* ===== セクション全体 ===== */
+.contact-form-section {
+    background-color: #63B13C;
+    padding: 60px 20px;
+    color: #fff;
+    position: relative;
+}
+
+/* ===== アイコンセット（中央揃え）===== */
+.contact-icon {
+    text-align: center;
+    min-width: 220px;
+}
+
+.contact-icon .icon-text {
+    white-space: nowrap;
+    color: #fff;
+    font-size: clamp(20px, 2.4vw, 36px);
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 2px;
+}
+
+.contact-icon .icon-underline {
+    background-color: #fff;
+    width: 100px;
+    height: 3px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ===== フォーム中央寄せ用ラッパー ===== */
+.form-wrapper {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+}
+
+/* ===== 各フォームグループ横並び ===== */
+.form-group.horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* ===== ラベル＋タグまとめたエリア（幅300px固定） ===== */
+.form-label-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.form-label-area label {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ===== 必須・任意マーク ===== */
+.form-label-box {
+    width: 52px;
+    height: 33px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.form-label-box.required {
+    background-color: #275B0D;
+    color: #fff;
+}
+
+.form-label-box.optional {
+    background-color: #DCFACD;
+    color: #275B0D;
+    border: 1px solid #275B0D;
+}
+
+/* ===== 入力欄スタイル ===== */
+input,
+textarea {
+    width: 600px;
+    max-width: 100%;
+    padding: 8px;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* ===== 入力欄下の破線（右端+50px分延長）===== */
+.form-dashed-line-under {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: calc(100% + 5px);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    /* 半透明の白 */
+
+}
+
+/* ===== 送信ボタン ===== */
+.form-submit {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.submit-button {
+    background-color: #275B0D;
+    color: #fff;
+    width: 340px;
+    height: 54px;
+    background-color: #fff;
+    color: #275B0D;
+    font-size: 24px;
+    padding: 12px 32px;
+    border: none;
+    font-weight: 500;
+    border: 3px solid #275B0D;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+/* ===== レスポンシブ対応（必要に応じて調整） ===== */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 0 12px;
+    }
+
+    .form-group.horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-label-area {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .form-dashed-line-under {
+        width: 100%;
+        bottom: -4p
+    }
+
+    .submit-button {
+        width: 100%;
+    }
 }
