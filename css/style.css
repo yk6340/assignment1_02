@@ -235,6 +235,67 @@ body {
     margin-bottom: 12px;
 }
 
+#section4 {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    /* ← セクション5が重ならないよう確保 */
+}
+
+.news {
+
+    position: relative;
+    margin-top: 50px;
+}
+
+.news-left {
+    width: 550px;
+    height: 200px;
+    background-color: #275B0D;
+    margin-bottom: 0;
+    position: relative;
+    margin-left: 0;
+}
+
+.news-title {
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+
+
+.news-right {
+    width: 1050px;
+    position: absolute;
+    left: 450px;
+    top: 310px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.news-item {
+    height: 100px;
+    background-color: #63B13C;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    /* ← これで均一に揃える！ */
+}
+
+.news-item:last-child {
+    margin-bottom: 0;
+    /* 最後だけ余白なしにして下にズレないように */
+}
+
 
 .headline {
     font-size: 24px;
@@ -251,4 +312,71 @@ body {
     font-size: 14px;
     line-height: 1.6;
     color: #333;
+}
+
+#section5 {
+    margin-top: 200px;
+}
+
+.parallax {
+
+    width: 100%;
+    height: 400px;
+    margin: 50px auto;
+    /* ← セクション4との間に50px */
+    background-image: url('../images/back.jpg');
+    background-attachment: fixed;
+    /* ← パララックス効果の核心！ */
+    background-size: contain;
+    /* ← 拡大縮小で画面にフィット */
+    background-repeat: no-repeat;
+    /* ← 画像の繰り返しを防止 */
+    background-position: center center;
+    /* ← 画像を中央に固定 */
+}
+
+.company-info {
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.label-area {
+    width: 300px;
+}
+
+.label {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.label-underline {
+    width: 300px;
+    height: 5px;
+    background-color: #275B0D;
+}
+
+.content-area {
+    width: 900px;
+}
+
+.content {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.content-underline {
+    width: 900px;
+    height: 5px;
+    background-color: #63B13C;
 }
