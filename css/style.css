@@ -514,6 +514,11 @@ textarea {
     color: #fff;
     width: 340px;
     height: 54px;
+    line-height: 54px;
+    align-items: center;
+    /* ← 縦方向中央揃え */
+    justify-content: center;
+    /* ← 横方向中央揃え */
     background-color: #fff;
     color: #275B0D;
     font-size: 24px;
@@ -523,6 +528,7 @@ textarea {
     border: 3px solid #275B0D;
     border-radius: 999px;
     cursor: pointer;
+    padding-top: 1px
 }
 
 /* ===== レスポンシブ対応（必要に応じて調整） ===== */
@@ -555,4 +561,32 @@ textarea {
     .submit-button {
         width: 100%;
     }
+}
+
+.map {
+    width: 100vw;
+    /* 画面の幅いっぱい */
+    aspect-ratio: 1500 / 483;
+    /* 画像の縦横比を保持 */
+    background-image: url('../images/map.jpg');
+    /* 画像パス確認してね！ */
+    background-size: cover;
+    /* はみ出さず全体に表示 */
+    background-position: center;
+    /* 中央に揃える */
+    background-repeat: no-repeat;
+}
+
+.footer {
+    height: 83px;
+    background-color: #275B0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    color: #DCFACD;
+    font-size: 16px;
+    margin: 0;
 }
