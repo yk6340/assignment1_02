@@ -18,7 +18,7 @@
             <h2>外構工事のことなら<br>何でもご相談ください</h2>
             <img src="./images/logo_top.png" alt="top" class="logo" />
         </section>
-
+        <a href="#section7" class="contact-button">お問い合わせはこちら</a>
         <section id="section2" class="business">
             <div class="icon-set">
                 <img src="./images/logo_g.png" alt="アイコン_緑" />
@@ -201,61 +201,62 @@
             </div>
 
             <div class="form-wrapper">
-
-                <!-- お名前 -->
-                <div class="form-group horizontal">
-                    <div class="form-label-area">
-                        <div class="form-label-box required">必須</div>
-                        <label for="name">お名前</label>
+                <form onsubmit="alert('送信されました！'); return false;">
+                    <!-- お名前 -->
+                    <div class="form-group horizontal">
+                        <div class="form-label-area">
+                            <div class="form-label-box required">必須</div>
+                            <label for="name">お名前</label>
+                        </div>
+                        <input type="text" id="name" name="name" required>
+                        <div class="form-dashed-line-under"></div>
                     </div>
-                    <input type="text" id="name" name="name" required />
-                    <div class="form-dashed-line-under"></div>
-                </div>
 
-                <!-- フリガナ -->
-                <div class="form-group horizontal">
-                    <div class="form-label-area">
-                        <div class="form-label-box required">必須</div>
-                        <label for="kana">フリガナ</label>
+                    <!-- フリガナ -->
+                    <div class="form-group horizontal">
+                        <div class="form-label-area">
+                            <div class="form-label-box required">必須</div>
+                            <label for="kana">フリガナ</label>
+                        </div>
+                        <input type="text" id="kana" name="kana" required />
+                        <div class="form-dashed-line-under"></div>
                     </div>
-                    <input type="text" id="kana" name="kana" required />
-                    <div class="form-dashed-line-under"></div>
-                </div>
 
-                <!-- 電話番号（任意） -->
-                <div class="form-group horizontal">
-                    <div class="form-label-area">
-                        <div class="form-label-box optional">任意</div>
-                        <label for="tel">電話番号</label>
+                    <!-- 電話番号（任意） -->
+                    <div class="form-group horizontal">
+                        <div class="form-label-area">
+                            <div class="form-label-box optional">任意</div>
+                            <label for="tel">電話番号</label>
+                        </div>
+                        <input type="tel" id="tel" name="tel" />
+                        <div class="form-dashed-line-under"></div>
                     </div>
-                    <input type="tel" id="tel" name="tel" />
-                    <div class="form-dashed-line-under"></div>
-                </div>
 
-                <!-- メールアドレス -->
-                <div class="form-group horizontal">
-                    <div class="form-label-area">
-                        <div class="form-label-box required">必須</div>
-                        <label for="email">メールアドレス</label>
+                    <!-- メールアドレス -->
+                    <div class="form-group horizontal">
+                        <div class="form-label-area">
+                            <div class="form-label-box required">必須</div>
+                            <label for="email">メールアドレス</label>
+                        </div>
+                        <input type="email" id="email" name="email" required />
+                        <div class="form-dashed-line-under"></div>
                     </div>
-                    <input type="email" id="email" name="email" required />
-                    <div class="form-dashed-line-under"></div>
-                </div>
 
-                <!-- お問い合わせ内容 -->
-                <div class="form-group horizontal">
-                    <div class="form-label-area">
-                        <div class="form-label-box required">必須</div>
-                        <label for="message">お問い合わせ内容</label>
+                    <!-- お問い合わせ内容 -->
+                    <div class="form-group horizontal">
+                        <div class="form-label-area">
+                            <div class="form-label-box required">必須</div>
+                            <label for="message">お問い合わせ内容</label>
+                        </div>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <div class="form-dashed-line-under"></div>
                     </div>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                    <div class="form-dashed-line-under"></div>
-                </div>
 
-                <!-- 送信ボタン -->
-                <div class="form-submit">
-                    <button type="submit" class="submit-button">送信</button>
-                </div>
+                    <!-- 送信ボタン -->
+                    <div class="form-submit">
+                        <button type="submit" class="submit-button">送信</button>
+                </form>
+            </div>
             </div>
         </section>
 
