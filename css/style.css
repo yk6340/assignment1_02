@@ -35,10 +35,8 @@ body {
     position: relative;
     width: 100%;
     max-width: 1500px;
-    /* デスクトップ上限 */
     height: auto;
     aspect-ratio: 15 / 7;
-    /* 1500x700の比率を維持する */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -53,7 +51,6 @@ body {
 /* 重ねるテキスト */
 .hero h2 {
     font-size: clamp(24px, 5vw, 48px);
-    /* 最小24px〜最大48pxの間で変動 */
     font-weight: 500;
     position: absolute;
     top: 50%;
@@ -74,7 +71,6 @@ body {
 
 .icon-set {
     width: clamp(100px, 9.6vw, 250px);
-    /* 画面サイズに応じて変動 */
     height: clamp(150px, 14vw, 206px);
     text-align: center;
     margin: 0 auto;
@@ -149,13 +145,11 @@ body {
     text-align: center;
     text-decoration: none;
     border-radius: 27px;
-    /* お好みで角丸 */
     transition: background-color 0.3s;
 }
 
 .cta-button:hover {
     background-color: #4e902e;
-    /* ホバー時、少し暗めに */
 }
 
 @media (max-width: 768px) {
@@ -235,25 +229,85 @@ body {
     margin-bottom: 12px;
 }
 
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    .left-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tag {
+        margin: 0 auto 8px auto;
+    }
+
+    .main-text {
+        font-size: 24px;
+    }
+}
+
 #section4 {
+    max-width: none !important;
     margin-top: 50px;
-    padding-bottom: 50px;
-    /* ← セクション5が重ならないよう確保 */
+    padding-bottom: 100px;
+    background-color: #fff;
 }
 
+.icon-set {
+    text-align: center;
+    margin: 0 auto 50px auto;
+}
+
+.icon-set img {
+    width: clamp(80px, 8.6vw, 129px);
+    height: clamp(90px, 9vw, 136px);
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-text {
+    font-size: clamp(20px, 2.4vw, 36px);
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.icon-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #63B13C;
+    margin: 0 auto 50px;
+}
+
+/* 全体を縦並びにする */
 .news {
-
     position: relative;
-    margin-top: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
 }
 
+/* 左ボックス */
 .news-left {
-    width: 550px;
+    position: relative;
+    width: calc(50% - 25px);
     height: 200px;
     background-color: #275B0D;
-    margin-bottom: 0;
-    position: relative;
-    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    /* ← アイコンセットの下にぴったり */
 }
 
 .news-title {
@@ -263,16 +317,18 @@ body {
     margin: 0;
 }
 
-
+/* 右ボックス */
 .news-right {
-    width: 1050px;
     position: absolute;
-    left: 450px;
-    top: 310px;
+    top: calc(100% - 200px);
+    /* ← news-leftの中に100px食い込む */
+    left: calc(50% - 150px);
+    /* ← 550 - 100 = 450pxにすることで重ねる */
+    right: 0;
     display: flex;
     flex-direction: column;
+    gap: 4px;
 }
-
 
 .news-item {
     height: 100px;
@@ -287,8 +343,6 @@ body {
     box-sizing: border-box;
     border-radius: 4px;
     line-height: 1.4;
-    margin-bottom: 4px;
-    /* ← これで均一に揃える！ */
 }
 
 .news-item:last-child {
@@ -312,6 +366,43 @@ body {
     font-size: 14px;
     line-height: 1.6;
     color: #333;
+}
+
+@media (max-width: 768px) {
+    .news {
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    .news-left {
+        width: 100%;
+        height: auto;
+        margin-bottom: 24px;
+        justify-content: center;
+    }
+
+    .news-right {
+        position: static;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .news-item {
+        height: auto;
+        padding: 16px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .news-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .icon-set {
+        margin-bottom: 40px;
+    }
 }
 
 #section5 {
