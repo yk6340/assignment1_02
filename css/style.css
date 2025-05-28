@@ -35,6 +35,16 @@ html {
 }
 
 /* セクション1 */
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    height: auto;
+    aspect-ratio: 15 / 7;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -71,6 +81,7 @@ html {
     position: absolute;
     top: 2vw;
     left: 2vw;
+    z-index: 11;
 }
 
 .icon-set {
@@ -102,8 +113,8 @@ html {
 
 .contact-button {
     position: absolute;
-    top: 43px;
-    right: 300px;
+    top: 8%;
+    right: 5%;
     width: 244px;
     height: 54px;
     background-color: #63B13C;
